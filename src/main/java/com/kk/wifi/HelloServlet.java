@@ -1,8 +1,23 @@
 package com.kk.wifi;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
+import com.kk.wifi.vo.WifiVO;
 import java.io.*;
+import java.lang.reflect.Field;
+import java.util.List;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import lombok.extern.slf4j.Slf4j;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
@@ -14,15 +29,78 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
 
+        List<WifiVO> userInfo = getUserInfo();
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<table>");
+        for (int i = 0; i < userInfo.size(); i++) {
+            out.println("<tr>");
+            WifiVO wifiVO = userInfo.get(i);
+            Field[] fields = wifiVO.getClass().getDeclaredFields();
+            for (Field field : fields) {
+                try {
+                    field.setAccessible(true);
+                    String s = (String) field.get(wifiVO);
+
+                    out.println("<td>");
+                    out.println(s);
+                    out.println("</td>");
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            out.println("</tr>");
+        }
+        out.println("</table>");
         out.println("</body></html>");
+
+
     }
 
     public void destroy() {
     }
+
+    public List<WifiVO> getUserInfo() {
+
+        try {
+            String url = "http://openapi.seoul.go.kr:8088/6e495875506b676839384d6b79554b/json/TbPublicWifiInfo/1/1000/";
+
+            // OkHttp 클라이언트 객체 생성
+            OkHttpClient client = new OkHttpClient();
+
+            // GET 요청 객체 생성
+            Request.Builder builder = new Request.Builder().url(url).get();
+            Request request = builder.build();
+
+            // OkHttp 클라이언트로 GET 요청 객체 전송
+            Response response = client.newCall(request).execute();
+            if (response.isSuccessful()) {
+                // 응답 받아서 처리
+                ResponseBody body = response.body();
+
+                if (body != null) {
+
+//                    System.out.println("Response:" + body.string());
+                    JsonElement jsonElement = JsonParser.parseString(body.string());
+                    JsonObject root = jsonElement.getAsJsonObject()
+                            .get("TbPublicWifiInfo").getAsJsonObject();
+                    JsonArray row = root.get("row").getAsJsonArray();
+                    Gson gson = new Gson();
+                    return gson.fromJson(row.toString(), new TypeToken<List<WifiVO>>(){}.getType());
+                }
+            }
+            else
+                System.err.println("Error Occurred");
+
+            return null;
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 }
