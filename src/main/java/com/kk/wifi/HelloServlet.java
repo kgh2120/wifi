@@ -6,6 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+import com.kk.wifi.db.WifiDao;
 import com.kk.wifi.vo.WifiVO;
 import java.io.*;
 import java.lang.reflect.Field;
@@ -30,31 +31,21 @@ public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
-
+        WifiDao wifiDao = new WifiDao();
         List<WifiVO> userInfo = getUserInfo();
+        wifiDao.insertWifis(userInfo);
+//        for (WifiVO wifiVO : userInfo) {
+//            wifiDao.insertWifi(wifiVO);
+//        }
         // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<table>");
-        for (int i = 0; i < userInfo.size(); i++) {
-            out.println("<tr>");
-            WifiVO wifiVO = userInfo.get(i);
-            Field[] fields = wifiVO.getClass().getDeclaredFields();
-            for (Field field : fields) {
-                try {
-                    field.setAccessible(true);
-                    String s = (String) field.get(wifiVO);
 
-                    out.println("<td>");
-                    out.println(s);
-                    out.println("</td>");
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-            out.println("</tr>");
-        }
-        out.println("</table>");
+
+
+
+
+        out.println("<html><body>");
+        out.println("<h1>하이?</h1>");
         out.println("</body></html>");
 
 
