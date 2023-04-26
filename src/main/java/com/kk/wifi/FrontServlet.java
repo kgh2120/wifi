@@ -2,6 +2,7 @@ package com.kk.wifi;
 
 import com.kk.wifi.controller.Controller;
 import com.kk.wifi.controller.HelloController;
+import com.kk.wifi.controller.SaveWifiController;
 import com.kk.wifi.servlet.MyView;
 import java.io.IOException;
 import java.util.Enumeration;
@@ -24,6 +25,7 @@ public class FrontServlet extends HttpServlet {
 
     public FrontServlet() {
         controllerMap.put("/servlet/hello",new HelloController());
+        controllerMap.put("/servlet/wifi",new SaveWifiController());
     }
 
 
