@@ -11,6 +11,8 @@ import com.kk.wifi.vo.WifiVO;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import lombok.extern.slf4j.Slf4j;
@@ -29,26 +31,21 @@ public class HelloServlet extends HttpServlet {
         message = "Hello World!";
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+
+
         response.setContentType("text/html;charset=UTF-8");
-        WifiDao wifiDao = new WifiDao();
-        List<WifiVO> userInfo = getUserInfo();
-        wifiDao.insertWifis(userInfo);
-//        for (WifiVO wifiVO : userInfo) {
-//            wifiDao.insertWifi(wifiVO);
-//        }
-        // Hello
-        PrintWriter out = response.getWriter();
+//        WifiDao wifiDao = new WifiDao();
+//        List<WifiVO> userInfo = getUserInfo();
+//        wifiDao.insertWifis(userInfo);
+////        for (WifiVO wifiVO : userInfo) {
+////            wifiDao.insertWifi(wifiVO);
+////        }
+//        // Hello
 
-
-
-
-
-        out.println("<html><body>");
-        out.println("<h1>하이?</h1>");
-        out.println("</body></html>");
-
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Hello.jsp");
+        dispatcher.forward(request,response);
     }
 
     public void destroy() {
