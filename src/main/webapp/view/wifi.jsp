@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>서울 와이파이 데이터</title>
-    <link rel="stylesheet" href="../css/wifi.css?after">
+    <link rel="stylesheet" href="../css/base.css?after">
 </head>
 <body>
     <div class="wifi-loading-wrapper">

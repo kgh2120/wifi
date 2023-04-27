@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>와이파이 정보 구하기</title>
-        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/base.css?after">
     </head>
     <body>
         <h1>와이파이 정보 구하기</h1>
@@ -43,10 +43,11 @@
                     <th>작업일자</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="wifi-body">
 
             </tbody>
         </table>
+        <div class="wifi-table-before-retrieve flex">위치 정보를 입력한 후에 조회해주세요.</div>
 
     <script src="js/home.js"></script>
     </body>

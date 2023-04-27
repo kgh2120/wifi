@@ -1,11 +1,8 @@
 package com.kk.wifi.controller;
 
-import com.google.gson.Gson;
 import com.kk.wifi.service.SaveWifiService;
-import com.kk.wifi.utils.BodySender;
+import com.kk.wifi.utils.BodyUtils;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +17,7 @@ public class SaveWifiController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        BodySender.sendBody(resp,service.saveWifiData());
+        BodyUtils.sendBody(resp,service.saveWifiData());
     }
 
 }

@@ -9,7 +9,5 @@ d
 4src/main/java/com/kk/wifi/controller/Controller.java,b\2\b22b22a70fd091031f15b833748bd784f653e4bc
 b
 2src/main/java/com/kk/wifi/config/DBConnection.java,c\4\c459d56b9d724ee9c412c15bfab6d57e8b2715fa
-X
-(src/main/java/com/kk/wifi/vo/WifiVO.java,0\b\0be786f0e9f2048c334db012beac34835929ecf9
 e
 5src/main/java/com/kk/wifi/utils/LocationDistance.java,3\7\378f4f0882e7b119c69a9482ab5ef6d53757d5dd

@@ -40,7 +40,19 @@ const getLocationEvent = () => {
 }
 
 const getNearWifiEvent = () => {
-  alert("Give Me Wifi Info!!")
+  let lat = document.getElementById("LAT").value;
+  let lnt = document.getElementById("LNT").value;
+  fetch("/near", {
+    method : "POST",
+    headers : {
+      'Content-Type': 'application/json',
+    },
+    body : JSON.stringify({
+      lat : lat, lnt : lnt
+    })
+  }).then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err))
 
 }
 

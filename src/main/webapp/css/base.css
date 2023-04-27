@@ -1,2 +1,8 @@
-@import "wifi.css";
-@import "home.css";
+@import url(wifi.css?after);
+@import url(home.css?after);
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
