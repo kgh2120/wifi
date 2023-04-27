@@ -14,10 +14,8 @@ public class HistoryRetrieveService {
     }
 
     public List<HistoryResponse> retrieveHistory(){
-        historyDao.init();
         System.out.println("service-hit!");
         List<HistoryResponse> responses = historyDao.retrieveHistory();
-        historyDao.end();
         return responses;
 
     }

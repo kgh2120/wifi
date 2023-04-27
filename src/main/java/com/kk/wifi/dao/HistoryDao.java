@@ -11,14 +11,19 @@ import java.util.List;
 
 public class HistoryDao {
 
-    private final static HistoryDao instance = new HistoryDao();
+    private static final  HistoryDao instance = new HistoryDao();
+
+    static {
+        init();
+    }
     public static HistoryDao getInstance(){
+
         return instance;
     }
 
-    private Connection conn;
+    private static Connection conn;
 
-    public void init() {
+    public static void init() {
         conn = DBConnection.getConnection();
     }
 
@@ -64,4 +69,14 @@ public class HistoryDao {
         return list;
     }
 
+    public void deleteHistory(int id) {
+        final String sql = "delete from history where id = ? ";
+        try{
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1,id);
+            pstm.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
