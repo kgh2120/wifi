@@ -1,0 +1,10 @@
+.history-table{
+
+}
+
+.history-body-row{
+  text-align: center;
+}
+.history-body-row:nth-child(even){
+  background-color: rgba(0,0,0,0.2);
+}

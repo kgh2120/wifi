@@ -15,6 +15,7 @@ public class NearWifiService {
 
     public void getNear20Wifis(double lat, double lng){
         historyDao.init();
+
         historyDao.saveHistory(Double.toString(lat),Double.toString(lng));
 
         historyDao.end();

@@ -1,8 +1,12 @@
 @import url(wifi.css?after);
 @import url(home.css?after);
+@import url(history.css?after);
 
 .flex{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.w-100{
+  width: 100%;
 }

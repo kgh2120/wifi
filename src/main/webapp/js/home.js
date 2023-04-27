@@ -34,9 +34,7 @@ function whereami() {
 }
 
 const getLocationEvent = () => {
-  alert("Give Me Location!!");
   whereami();
-
 }
 
 const getNearWifiEvent = () => {

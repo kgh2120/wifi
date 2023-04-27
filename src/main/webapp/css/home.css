@@ -1,16 +1,18 @@
-.wifi-table{
+.common-table{
   border: 1px solid rgba(0,0,0,0.4);
   border-collapse: collapse;
-  margin-top: 20px
-;
+  margin-top: 20px;
+}
+.common-table th, .common-table td{
+  border: 1px solid rgba(0,0,0,0.4);
 }
 
-.wifi-table-header{
+.common-table-header{
   color: white;
   background-color: green;
   opacity: 0.9;
 }
-.wifi-table-header th{
+.common-table-header th{
   padding: 5px 10px;
 }
 .link-wrapper a{

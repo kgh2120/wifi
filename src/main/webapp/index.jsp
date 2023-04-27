@@ -3,15 +3,14 @@
 <html>
     <head>
         <title>와이파이 정보 구하기</title>
-        <link rel="stylesheet" href="css/base.css?after">
+        <link rel="stylesheet" href="/css/base.css?after">
     </head>
     <body>
         <h1>와이파이 정보 구하기</h1>
         <div class="link-wrapper">
             <a href="/">홈</a>
-            <a href="/history">위치 히스토리 목록</a>
+            <a href="/view/history.jsp">위치 히스토리 목록</a>
             <a href="/view/wifi.jsp">Open API 와이파이 정보 가져오기</a>
-
         </div>
         <div>
             <label for="LAT">LAT</label>
@@ -21,8 +20,8 @@
             <button id="my-location-btn">내 위치 가져오기</button>
             <button id="near_wifi_btn">근처 WIFI 정보 보기</button>
         </div>
-        <table class="wifi-table">
-            <thead class="wifi-table-header">
+        <table class="common-table">
+            <thead class="common-table-header">
                 <tr>
                     <th>거리(Km)</th>
                     <th>관리번호</th>
