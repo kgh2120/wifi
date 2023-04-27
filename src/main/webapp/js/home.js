@@ -41,6 +41,7 @@ const getLocationEvent = () => {
 
 const getNearWifiEvent = () => {
   alert("Give Me Wifi Info!!")
+
 }
 
 function addEventToLocationBtn() {

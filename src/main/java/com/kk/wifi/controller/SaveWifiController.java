@@ -1,15 +1,26 @@
 package com.kk.wifi.controller;
 
+import com.google.gson.Gson;
 import com.kk.wifi.service.SaveWifiService;
+import com.kk.wifi.utils.BodySender;
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-public class SaveWifiController implements Controller{
+@WebServlet(name = "saveWifiController", value = "/wifi")
+public class SaveWifiController extends HttpServlet {
 
     private final SaveWifiService service = SaveWifiService.getInstance();
+
     @Override
-    public String process(Map<String, String> param, Map<String, Object> model) {
-        int count = service.saveWifiData();
-        model.put("count",count);
-        return "wifi";
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        BodySender.sendBody(resp,service.saveWifiData());
     }
+
 }

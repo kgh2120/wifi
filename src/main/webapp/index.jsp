@@ -10,7 +10,8 @@
         <div class="link-wrapper">
             <a href="/">홈</a>
             <a href="/history">위치 히스토리 목록</a>
-            <a href="/servlet/wifi">Open API 와이파이 정보 가져오기</a>
+            <a href="/view/wifi.jsp">Open API 와이파이 정보 가져오기</a>
+
         </div>
         <div>
             <label for="LAT">LAT</label>

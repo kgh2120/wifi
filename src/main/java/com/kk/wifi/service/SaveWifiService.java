@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.kk.wifi.dao.WifiDao;
+import com.kk.wifi.dto.WifiCountResponse;
 import com.kk.wifi.vo.WifiVO;
 import java.util.List;
 import okhttp3.OkHttpClient;
@@ -23,7 +24,7 @@ public class SaveWifiService {
         return instance;
     }
 
-    public int saveWifiData(){
+    public WifiCountResponse saveWifiData(){
 
 
 
@@ -33,7 +34,7 @@ public class SaveWifiService {
 
         int count = wifiDao.countWifis();
         if(count != 0)
-            return count;
+            return new WifiCountResponse(count);
 
         for (int i = 0; i < 24; i++) {
             List<WifiVO> userInfo = getUserInfo(offset,limit);
@@ -46,7 +47,7 @@ public class SaveWifiService {
         count = wifiDao.countWifis();
         wifiDao.end();
 
-        return count;
+        return new WifiCountResponse(count);
 
 
     }

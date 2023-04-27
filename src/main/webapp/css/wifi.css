@@ -1,6 +1,13 @@
 
 
 .wifi-wrapper{
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wifi-loading-wrapper{
   display: flex;
   justify-content: center;
   flex-direction: column;

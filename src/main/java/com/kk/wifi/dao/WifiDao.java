@@ -100,4 +100,6 @@ public class WifiDao {
         return sb.toString();
     }
 
+    public void getLocation() {
+    }
 }
