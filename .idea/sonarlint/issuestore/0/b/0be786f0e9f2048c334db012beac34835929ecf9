@@ -1,18 +1,0 @@
-
-n	java:S116"YRename this field "X_SWIFI_MGR_NO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í§ì¾
-n	java:S116	"YRename this field "X_SWIFI_WRDOFC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤é„—
-o	java:S116
-"ZRename this field "X_SWIFI_MAIN_NM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šáˆÛ
-n	java:S116"YRename this field "X_SWIFI_ADRES1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÍ«
-s	java:S116"YRename this field "X_SWIFI_ADRES2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û°¸¶úÿÿÿÿ
-x	java:S116"^Rename this field "X_SWIFI_INSTL_FLOOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¿£€ÿÿÿÿÿ
-p	java:S116"[Rename this field "X_SWIFI_INSTL_TY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù€°
-v	java:S116"\Rename this field "X_SWIFI_INSTL_MBY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù¨ïùÿÿÿÿ
-s	java:S116"YRename this field "X_SWIFI_SVC_SE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı“÷óıÿÿÿÿ
-m	java:S116"XRename this field "X_SWIFI_CMCWR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÓ’¥
-w	java:S116"]Rename this field "X_SWIFI_CNSTC_YEAR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú×şøÿÿÿÿ
-r	java:S116"]Rename this field "X_SWIFI_INOUT_DOOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ÷é
-o	java:S116"ZRename this field "X_SWIFI_REMARS3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞâÚî
-c	java:S116"NRename this field "LAT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÄÂ
-h	java:S116"NRename this field "LNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…»²¬ıÿÿÿÿ
-i	java:S116"TRename this field "WORK_DTTM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ñÙ
