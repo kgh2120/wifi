@@ -49,7 +49,28 @@ const getNearWifiEvent = () => {
       lat : lat, lnt : lnt
     })
   }).then(res => res.json())
-  .then(data => console.log(data))
+  .then(data => {
+    let body = document.querySelector(".wifi-body");
+    let before = document.querySelector(".wifi-table-before-retrieve");
+
+    data.forEach(d => {
+      let tr = document.createElement("tr");
+      let keys = Object.keys(d);
+      for (let i = 0; i<keys.length;i++) {
+        let td = document.createElement("td");
+        if(keys[i] === "distance"){
+
+          td.innerText = d[keys[i]].toFixed(4) + "km";
+        }else{
+          td.innerText = d[keys[i]];
+        }
+        tr.append(td);
+      }
+      body.append(tr);
+    })
+    before.style.display = 'none';
+
+  })
   .catch(err => console.error(err))
 
 }

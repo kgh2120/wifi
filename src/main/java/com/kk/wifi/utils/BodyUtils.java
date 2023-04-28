@@ -31,9 +31,7 @@ public class BodyUtils {
             builder.append(buffer);
         }
         Gson gson = new Gson();
-        Object dto = gson.fromJson(builder.toString(), body);
-
-        return dto;
+        return gson.fromJson(builder.toString(), body);
     }
 
 }

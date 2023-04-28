@@ -20,7 +20,7 @@
             <button id="my-location-btn">내 위치 가져오기</button>
             <button id="near_wifi_btn">근처 WIFI 정보 보기</button>
         </div>
-        <table class="common-table">
+        <table class="common-table w-100">
             <thead class="common-table-header">
                 <tr>
                     <th>거리(Km)</th>
@@ -37,8 +37,8 @@
                     <th>설치년도</th>
                     <th>실내외구분</th>
                     <th>WIFI접속환경</th>
-                    <th>X좌표</th>
-                    <th>Y좌표</th>
+                    <th>경도</th>
+                    <th>위도</th>
                     <th>작업일자</th>
                 </tr>
             </thead>
@@ -48,6 +48,6 @@
         </table>
         <div class="wifi-table-before-retrieve flex">위치 정보를 입력한 후에 조회해주세요.</div>
 
-    <script src="js/home.js"></script>
+    <script src="js/home.js?after"></script>
     </body>
 </html>
