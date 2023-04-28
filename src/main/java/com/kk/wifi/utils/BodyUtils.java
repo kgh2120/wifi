@@ -12,7 +12,7 @@ public class BodyUtils {
     public static void sendBody(HttpServletResponse resp, Object body){
         Gson gson = new Gson();
         String json = gson.toJson(body);
-        resp.setContentType("application/json");
+        resp.setContentType("application/json;charset=UTF-8");
         try {
             resp.getWriter().println(json);
         } catch (IOException e) {

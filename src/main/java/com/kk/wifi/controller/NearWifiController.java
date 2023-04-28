@@ -1,9 +1,11 @@
 package com.kk.wifi.controller;
 
 import com.kk.wifi.dto.NearWifiRequest;
+import com.kk.wifi.dto.NearWifiResponse;
 import com.kk.wifi.service.NearWifiService;
 import com.kk.wifi.utils.BodyUtils;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,9 +22,8 @@ public class NearWifiController extends HttpServlet {
 
         NearWifiRequest dto = (NearWifiRequest) BodyUtils.readBody(req,
                 NearWifiRequest.class);
-        service.getNear20Wifis(dto.getLat(), dto.getLnt());
+        List<NearWifiResponse> response = service.getNear20Wifis(dto.getLat(), dto.getLnt());
 
-
-        BodyUtils.sendBody(resp,dto);
+        BodyUtils.sendBody(resp,response);
     }
 }

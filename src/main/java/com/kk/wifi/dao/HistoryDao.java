@@ -31,7 +31,8 @@ public class HistoryDao {
         DBConnection.closeConnection();
     }
 
-    public void saveHistory(String lat, String lnt){
+    public int saveHistory(String lat, String lnt){
+        int id = -1;
         final String now = LocalDateTime.now().toString();
         String sql = "insert into history(lat, lnt, created_at) values(?, ?, ?) ";
         try{
@@ -41,10 +42,14 @@ public class HistoryDao {
             pstm.setString(3, now);
 
             pstm.executeUpdate();
+            ResultSet rs = pstm.getGeneratedKeys();
+            rs.next();
+            id = rs.getInt(1);
 
         }catch (Exception e){
             e.printStackTrace();
         }
+        return id;
     }
 
 

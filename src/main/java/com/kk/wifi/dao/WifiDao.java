@@ -1,12 +1,15 @@
 package com.kk.wifi.dao;
 
 import com.kk.wifi.config.DBConnection;
+import com.kk.wifi.dto.HistoryResponse;
+import com.kk.wifi.dto.WifiLocationDto;
 import com.kk.wifi.vo.WifiVO;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class WifiDao {
@@ -15,10 +18,13 @@ public class WifiDao {
     public static WifiDao getInstance(){
         return instance;
     }
+    static{
+        init();
+    }
 
-    private Connection conn;
+    private static Connection conn;
 
-    public void init() {
+    public static void init() {
         conn = DBConnection.getConnection();
     }
 
@@ -42,7 +48,7 @@ public class WifiDao {
 
 
     public void insertWifis(List<WifiVO> vo) {
-        System.out.println("LIST.size() => " + vo.size());
+
 
         int count = 0;
         int batchLimit = 100;
@@ -100,6 +106,23 @@ public class WifiDao {
         return sb.toString();
     }
 
-    public void getLocation() {
+    public List<WifiLocationDto> getLocation() {
+
+        final String selectSql = "select X_SWIFI_MGR_NO, LAT, LNT from wifi";
+        List<WifiLocationDto> list = new ArrayList<>();
+        try{
+            PreparedStatement pstm = conn.prepareStatement(selectSql);
+            ResultSet rs = pstm.executeQuery();
+            while(rs.next()){
+                String id = rs.getString("X_SWIFI_MGR_NO");
+                String lnt = rs.getString("LAT");
+                String lat = rs.getString("LNT");
+                WifiLocationDto response = new WifiLocationDto(id, lat, lnt);
+                list.add(response);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
     }
 }
