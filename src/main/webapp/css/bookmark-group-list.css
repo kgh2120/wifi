@@ -1,0 +1,11 @@
+.bookmark-group-table-data{
+  text-align: center;
+  font-weight: bold;
+}
+.anchor{
+  color: blue;
+  text-decoration: underline;
+}
+.anchor:hover{
+  cursor: pointer;
+}

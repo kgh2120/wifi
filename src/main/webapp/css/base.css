@@ -2,6 +2,7 @@
 @import url(home.css?after);
 @import url(history.css?after);
 @import url(detail.css?after);
+@import url(bookmark-group-list.css?after);
 
 .flex{
   display: flex;

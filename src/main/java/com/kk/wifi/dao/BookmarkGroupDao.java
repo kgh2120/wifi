@@ -59,6 +59,9 @@ public class BookmarkGroupDao {
                 response.setOrders(rs.getInt("orders"));
                 response.setCreated_at(rs.getString("created_at"));
                 response.setModified_at(rs.getString("modified_at"));
+                if(response.getModified_at() == null){
+                    response.setModified_at("");
+                }
                 list.add(response);
             }
         }catch (SQLException e){

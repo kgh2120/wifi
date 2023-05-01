@@ -3,8 +3,6 @@
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 b
 2src/main/java/com/kk/wifi/dto/NearWifiRequest.java,b\a\ba1de391ed874d75337f81847f938a7d526866c3
-P
- src/main/webapp/view/history.jsp,4\a\4afdb56a1a1ce6faa0063b58d1cf543c9683b14a
 f
 6src/main/java/com/kk/wifi/service/SaveWifiService.java,8\a\8ad5dc1d42d46a6183147e8ce8c4b890eb4b648d
 b
@@ -29,8 +27,6 @@ O
 .src/main/java/com/kk/wifi/utils/BodyUtils.java,7\6\76d541e0caa47451b956b956ac4a4592a79ad1df
 X
 (src/main/java/com/kk/wifi/vo/WifiVO.java,0\b\0be786f0e9f2048c334db012beac34835929ecf9
-M
-src/main/webapp/js/history.js,3\8\381f805680c67b0910156bbaadac16d3329b7836
 k
 ;src/main/java/com/kk/wifi/controller/HistoryController.java,a\e\ae189bac38c3d3ccde873f81fcae6921dcef4539
 M
