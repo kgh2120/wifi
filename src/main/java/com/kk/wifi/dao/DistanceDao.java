@@ -68,6 +68,11 @@ public class DistanceDao {
                 Field[] fields = response.getClass().getDeclaredFields();
                 for (Field field : fields) {
                     field.setAccessible(true);
+
+                    if("history_id".equals(field.getName())){
+                        field.set(response,rs.getInt(field.getName()));
+                        continue;
+                    }
                     if("distance".equals(field.getName())){
                         field.set(response,rs.getDouble(field.getName()));
                         continue;

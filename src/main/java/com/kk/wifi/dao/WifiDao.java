@@ -1,7 +1,7 @@
 package com.kk.wifi.dao;
 
 import com.kk.wifi.config.DBConnection;
-import com.kk.wifi.dto.HistoryResponse;
+import com.kk.wifi.dto.WIfiDetailResponse;
 import com.kk.wifi.dto.WifiLocationDto;
 import com.kk.wifi.vo.WifiVO;
 import java.lang.reflect.Field;
@@ -30,6 +30,43 @@ public class WifiDao {
 
     public void end() {
         DBConnection.closeConnection();
+    }
+
+    public WIfiDetailResponse getWifiDetailInfo(int historyId, String wifiName){
+
+        final String sql = "select * from wifi left join distance on wifi.X_SWIFI_MGR_NO = distance.wifi_id "
+                + "where distance.history_id = ? and wifi.X_SWIFI_MAIN_NM = ? ";
+        PreparedStatement pstm;
+        try{
+            WIfiDetailResponse response = new WIfiDetailResponse();
+            pstm = conn.prepareStatement(sql);
+            pstm.setInt(1, historyId);
+            pstm.setString(2, wifiName);
+            ResultSet rs = pstm.executeQuery();
+            Field[] fields = response.getClass().getDeclaredFields();
+            while(rs.next()){
+                for (Field field : fields) {
+                    field.setAccessible(true);
+                    if("distance".equals(field.getName())){
+                        field.set(response,rs.getDouble(field.getName()));
+                        continue;
+                    }
+                    if("distanceId".equals(field.getName())){
+                        field.set(response,rs.getInt("id"));
+                        continue;
+                    }
+                    field.set(response,rs.getString(field.getName()));
+                }
+            }
+            return response;
+        }catch (Exception e){
+            e.printStackTrace();
+
+            return null;
+        }finally {
+//            if()pstm.close();
+        }
+
     }
 
     public int countWifis(){
@@ -70,8 +107,6 @@ public class WifiDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-//        System.out.println("----Complete!!-----");
     }
 
     private void insertFieldDataIntoPrepareStatement(PreparedStatement st, WifiVO vo)

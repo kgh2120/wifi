@@ -15,7 +15,7 @@ public class SaveWifiController extends HttpServlet {
     private final SaveWifiService service = SaveWifiService.getInstance();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         BodyUtils.sendBody(resp,service.saveWifiData());
     }

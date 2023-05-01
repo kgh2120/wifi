@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class NearWifiResponse {
 
+    private int history_id;
     private double distance;
     private String X_SWIFI_MGR_NO;
     private String X_SWIFI_WRDOFC;

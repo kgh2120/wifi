@@ -1,0 +1,12 @@
+.detail-table-title{
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.table-row td{
+
+  height: 40px;
+}
+.table-row td:nth-child(2){
+  padding: 5px 10px;
+}
