@@ -30,7 +30,7 @@ public class SaveWifiService {
 
         int offset = 1;
         int limit = 1000;
-        wifiDao.init();
+
 
         int count = wifiDao.countWifis();
         if(count != 0)
@@ -45,7 +45,7 @@ public class SaveWifiService {
         }
 
         count = wifiDao.countWifis();
-        wifiDao.end();
+
 
         return new WifiCountResponse(count);
 

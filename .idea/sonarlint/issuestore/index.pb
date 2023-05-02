@@ -7,20 +7,14 @@ b
 2src/main/java/com/kk/wifi/dto/HistoryResponse.java,5\f\5f859cde001d8ee46fcd296bf2348ec59bf5b30f
 d
 4src/main/java/com/kk/wifi/dto/WifiCountResponse.java,4\9\4969dcfee2fb58aa54f56aaa72bf71e4e009aaf4
-k
-;src/main/java/com/kk/wifi/service/HistoryDeleteService.java,f\1\f12906d8e939f89bf3e3fda5a35f99dba181fd70
 \
 ,src/main/java/com/kk/wifi/vo/DistanceVO.java,b\5\b52210c09df0dd29ab9712aded815eb5c8bdb993
-m
-=src/main/java/com/kk/wifi/service/HistoryRetrieveService.java,6\e\6e14d2605819e0a89e9035384ad9758ddf33330f
 e
 5src/main/java/com/kk/wifi/utils/LocationDistance.java,3\7\378f4f0882e7b119c69a9482ab5ef6d53757d5dd
 b
 2src/main/java/com/kk/wifi/dto/WifiLocationDto.java,1\e\1e473a636e1ba14dc5cb808d27c19f5b6d7f956f
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-f
-6src/main/java/com/kk/wifi/service/NearWifiService.java,4\d\4d610a6759b14656cf7b3ec1468f456ca511521f
 L
 src/main/webapp/css/wifi.css,f\2\f2040876eb111784dd82ac489b13264d754468a1
 c

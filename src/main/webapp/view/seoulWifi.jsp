@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="wifi-loading-wrapper">
-        <h1>서울시 와이파이 정보를 불러오는 중입니다...</h1>
+        <h1>서울시 와이파이 정보를 불러오는 중입니다... (소요시간 약 1분)</h1>
     </div>
     <div class="wifi-wrapper">
         <h1 class="wifi-result"></h1>
