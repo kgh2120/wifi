@@ -41,8 +41,6 @@ l
 <src/main/java/com/kk/wifi/dto/BookmarkGroupListResponse.java,d\3\d363cab30e4444fd108c270e053ebbb20ee26abd
 ^
 .src/main/java/com/kk/wifi/dao/DistanceDao.java,a\e\aefbf011ecd82ca6b67c0cd56716b476b8574b76
-c
-3src/main/java/com/kk/wifi/dao/BookmarkGroupDao.java,7\6\769641ff5575cd56983c3e10dc36289ae9640712
 [
 +src/main/webapp/css/bookmark-group-list.css,a\6\a697ce6c3a7c6eb1ce3bfdf8b9c07fabb8792654
 P

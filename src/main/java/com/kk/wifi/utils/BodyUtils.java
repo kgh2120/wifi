@@ -20,7 +20,7 @@ public class BodyUtils {
         }
     }
 
-    public static Object readBody(HttpServletRequest request, Class<?> body) throws IOException {
+    public static <T> T  readBody(HttpServletRequest request, Class<T> body) throws IOException {
         BufferedReader input = new BufferedReader(new InputStreamReader(request.getInputStream(),"UTF-8"));
         StringBuilder builder = new StringBuilder();
         String buffer;

@@ -27,7 +27,7 @@ public class BookmarkGroupController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        BookmarkGroupCreateRequest requestDto = (BookmarkGroupCreateRequest) readBody(
+        BookmarkGroupCreateRequest requestDto = readBody(
                 req, BookmarkGroupCreateRequest.class);
         System.out.println(requestDto);
         bookmarkGroupService.createBookmarkGroup(requestDto);
@@ -36,7 +36,7 @@ public class BookmarkGroupController extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        BookmarkGroupUpdateRequest requestDto = (BookmarkGroupUpdateRequest) readBody(
+        BookmarkGroupUpdateRequest requestDto = readBody(
                 req, BookmarkGroupUpdateRequest.class);
         bookmarkGroupService.updateBookmarkGroup(requestDto);
     }
