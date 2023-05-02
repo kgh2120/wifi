@@ -33,6 +33,10 @@ const getLocationEvent = () => {
 const getNearWifiEvent = () => {
   let lat = document.getElementById("LAT").value;
   let lnt = document.getElementById("LNT").value;
+  let body = document.querySelector(".wifi-body");
+  let before = document.querySelector(".wifi-table-before-retrieve");
+  body.innerHTML = "";
+
   fetch("/near", {
     method : "POST",
     headers : {
@@ -43,9 +47,6 @@ const getNearWifiEvent = () => {
     })
   }).then(res => res.json())
   .then(data => {
-    let body = document.querySelector(".wifi-body");
-    let before = document.querySelector(".wifi-table-before-retrieve");
-
     data.forEach(d => {
       let tr = document.createElement("tr");
       let keys = Object.keys(d);
