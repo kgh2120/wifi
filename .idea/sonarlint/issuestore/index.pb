@@ -3,10 +3,6 @@
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 b
 2src/main/java/com/kk/wifi/dto/NearWifiRequest.java,b\a\ba1de391ed874d75337f81847f938a7d526866c3
-f
-6src/main/java/com/kk/wifi/service/SaveWifiService.java,8\a\8ad5dc1d42d46a6183147e8ce8c4b890eb4b648d
-b
-2src/main/java/com/kk/wifi/config/DBConnection.java,c\4\c459d56b9d724ee9c412c15bfab6d57e8b2715fa
 b
 2src/main/java/com/kk/wifi/dto/HistoryResponse.java,5\f\5f859cde001d8ee46fcd296bf2348ec59bf5b30f
 d
@@ -31,10 +27,6 @@ c
 3src/main/java/com/kk/wifi/dto/NearWifiResponse.java,3\3\33d4028cda9fe035519ec79b64cf4e294f6fa5b4
 e
 5src/main/java/com/kk/wifi/dto/WIfiDetailResponse.java,5\8\58d05d2944563531a52f60b0ea259331af7d1b94
-N
-src/main/webapp/css/detail.css,a\e\aeae9f01ba4d10f55b82ff464bf8ad5487d0a013
-k
-;src/main/java/com/kk/wifi/service/BookmarkGroupService.java,d\d\ddd1abf9b9c49087475ad53215bb75174768db17
 l
 <src/main/java/com/kk/wifi/dto/BookmarkGroupListResponse.java,d\3\d363cab30e4444fd108c270e053ebbb20ee26abd
 [

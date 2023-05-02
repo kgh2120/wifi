@@ -22,6 +22,12 @@
 </div>
 
 <%-- 북마크 관련 디자인 추가--%>
+<div>
+    <select class="bookmark-group-selector">
+        <option value="">북마크 그룹 이름 선택</option>
+    </select>
+    <button class="bookmark-add-btn">북마크 추가하기</button>
+</div>
 
 <table class="w-100 common-table">
     <tbody class="detail-table-body">
@@ -79,6 +85,6 @@
     </tbody>
 </table>
 
-<script src="../js/detail.js?after"></script>
+<script src="../js/wifiDetail.js?after"></script>
 </body>
 </html>

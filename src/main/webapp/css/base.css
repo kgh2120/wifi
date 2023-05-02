@@ -5,6 +5,8 @@
 @import url(bookmark-group-list.css?after);
 @import url(bookmarkPost.css?after);
 
+
+
 .flex{
   display: flex;
   justify-content: center;

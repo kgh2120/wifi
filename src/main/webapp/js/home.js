@@ -50,20 +50,21 @@ const getNearWifiEvent = () => {
       let tr = document.createElement("tr");
       let keys = Object.keys(d);
       tr.classList.add("table-row");
-      for (let i = 0; i<keys.length;i++) {
+      for (const element of keys) {
         let td = document.createElement("td");
-        if(keys[i] === "history_id")
+        if (element === "history_id") {
           continue;
+        }
 
-        if(keys[i] === "distance"){
-          td.innerText = d[keys[i]].toFixed(4) + "km";
-        }else if(keys[i] === "X_SWIFI_MAIN_NM") {
+        if (element === "distance") {
+          td.innerText = d[element].toFixed(4) + "km";
+        } else if (element === "X_SWIFI_MAIN_NM") {
           const anchor = document.createElement("a");
-          anchor.innerText = d[keys[i]];
+          anchor.innerText = d[element];
           anchor.href = `/view/wifiDetail.jsp?historyId=${d.history_id}&wifiId=${d.X_SWIFI_MGR_NO}`
           td.append(anchor);
-        }else{
-          td.innerText = d[keys[i]];
+        } else {
+          td.innerText = d[element];
         }
         tr.append(td);
       }

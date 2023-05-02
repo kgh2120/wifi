@@ -9,8 +9,7 @@
 
 .common-table-header{
   color: white;
-  background-color: green;
-  opacity: 0.9;
+  background-color: #00AB6F;;
 }
 .common-table-header th{
   padding: 5px 10px;
