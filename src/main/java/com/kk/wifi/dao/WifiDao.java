@@ -32,16 +32,16 @@ public class WifiDao {
         DBConnection.closeConnection();
     }
 
-    public WIfiDetailResponse getWifiDetailInfo(int historyId, String wifiName){
+    public WIfiDetailResponse getWifiDetailInfo(int historyId, String wifiId){
 
         final String sql = "select * from wifi left join distance on wifi.X_SWIFI_MGR_NO = distance.wifi_id "
-                + "where distance.history_id = ? and wifi.X_SWIFI_MAIN_NM = ? ";
+                + "where distance.history_id = ? and distance.wifi_id = ? ";
         PreparedStatement pstm;
         try{
             WIfiDetailResponse response = new WIfiDetailResponse();
             pstm = conn.prepareStatement(sql);
             pstm.setInt(1, historyId);
-            pstm.setString(2, wifiName);
+            pstm.setString(2, wifiId);
             ResultSet rs = pstm.executeQuery();
             Field[] fields = response.getClass().getDeclaredFields();
             while(rs.next()){

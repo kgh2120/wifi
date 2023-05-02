@@ -60,7 +60,7 @@ const getNearWifiEvent = () => {
         }else if(keys[i] === "X_SWIFI_MAIN_NM") {
           const anchor = document.createElement("a");
           anchor.innerText = d[keys[i]];
-          anchor.href = `/view/detail.jsp?historyId=${d.history_id}&wifiName=${d.X_SWIFI_MAIN_NM}`
+          anchor.href = `/view/wifiDetail.jsp?historyId=${d.history_id}&wifiId=${d.X_SWIFI_MGR_NO}`
           td.append(anchor);
         }else{
           td.innerText = d[keys[i]];

@@ -14,7 +14,7 @@ function getQueryStringObject() {
 
 function fetchWifiDetail(historyId, wifiName){
 
-  fetch(`/wifi/detail?historyId=${historyId}&X_SWIFI_MAIN_NM=${wifiName}`)
+  fetch(`/wifi/detail?historyId=${historyId}&wifiId=${wifiName}`)
   .then(res => res.json())
   .then(data => {
     let rows = document.getElementsByClassName("table-row");
@@ -26,6 +26,7 @@ function fetchWifiDetail(historyId, wifiName){
         keyIdx++;
         continue;
       }
+      console.log(data)
 
       let tableData = document.createElement("td");
       if(keys[keyIdx] === "distance")
@@ -41,7 +42,7 @@ function fetchWifiDetail(historyId, wifiName){
 
 function init(){
   let queryString = getQueryStringObject();
-  fetchWifiDetail(queryString.historyId,queryString.wifiName);
+  fetchWifiDetail(queryString.historyId,queryString.wifiId);
 
 }
 

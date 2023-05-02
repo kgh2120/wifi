@@ -23,8 +23,8 @@ public class RetrieveWifiDetailController extends HttpServlet {
             throws ServletException, IOException {
         try{
             int historyId = Integer.parseInt(Objects.requireNonNull(req.getParameter("historyId")));
-            String wifiName = Objects.requireNonNull(req.getParameter("X_SWIFI_MAIN_NM"));
-            WIfiDetailResponse response = retrieveWifiDetailService.retrieveWifiDetail(historyId,wifiName);
+            String wifiId = Objects.requireNonNull(req.getParameter("wifiId"));
+            WIfiDetailResponse response = retrieveWifiDetailService.retrieveWifiDetail(historyId,wifiId);
             BodyUtils.sendBody(resp, response);
         }catch (NullPointerException | NumberFormatException e){
             resp.setStatus(404);

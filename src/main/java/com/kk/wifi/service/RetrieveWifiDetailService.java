@@ -12,7 +12,7 @@ public class RetrieveWifiDetailService {
         return instance;
     }
 
-    public WIfiDetailResponse retrieveWifiDetail(int historyId, String wifiName) {
-        return wifiDao.getWifiDetailInfo(historyId,wifiName);
+    public WIfiDetailResponse retrieveWifiDetail(int historyId, String wifiId) {
+        return wifiDao.getWifiDetailInfo(historyId,wifiId);
     }
 }
