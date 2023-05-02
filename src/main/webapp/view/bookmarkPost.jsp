@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>와이파이 정보 구하기</title>
+    <link rel="stylesheet" href="../css/base.css?after">
 </head>
 <body>
 <h1>북마크 그룹</h1>
@@ -20,5 +21,23 @@
     <a href="/view/bookmarkGroupList.jsp">북마크 그룹 관리</a>
 </div>
 
+<table class="w-100 common-table">
+    <tbody class="detail-table-body">
+    <tr class="table-row">
+        <td class="common-table-header w-20 detail-table-title">북마크 이름</td>
+        <td><input class="bookmark-post-name-input" type="text" placeholder="북마크 이름"/></td>
+    </tr>
+    <tr class="table-row">
+        <td class="common-table-header w-20 detail-table-title">순서</td>
+        <td><input class="bookmark-post-order-input" type="number" placeholder="순서"/></td>
+    </tr>
+    </tbody>
+</table>
+<div class="bookmark-group-post-action-wrapper">
+
+</div>
+
+
+<script src="/js/bookmarkPost.js?after"></script>
 </body>
 </html>

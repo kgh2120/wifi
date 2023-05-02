@@ -16,7 +16,7 @@ function retrieveBookmarkGroupList(){
       }
       let td = document.createElement("td");
       let updateAnchor = document.createElement("a");
-      updateAnchor.href = "/view/bookmarkPost.jsp?mode=edit";
+      updateAnchor.href = `/view/bookmarkPost.jsp?mode=edit&id=${d.id}&name=${d.name}&order=${d.orders}`;
       updateAnchor.innerText = "수정";
 
       let deleteAnchor = document.createElement("span");

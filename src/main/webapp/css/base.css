@@ -3,6 +3,7 @@
 @import url(history.css?after);
 @import url(detail.css?after);
 @import url(bookmark-group-list.css?after);
+@import url(bookmarkPost.css?after);
 
 .flex{
   display: flex;

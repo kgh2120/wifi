@@ -29,6 +29,7 @@ public class BookmarkGroupController extends HttpServlet {
             throws ServletException, IOException {
         BookmarkGroupCreateRequest requestDto = (BookmarkGroupCreateRequest) readBody(
                 req, BookmarkGroupCreateRequest.class);
+        System.out.println(requestDto);
         bookmarkGroupService.createBookmarkGroup(requestDto);
     }
 

@@ -1,4 +1,5 @@
 function deleteHistory(id){
+  // TODO History delete 추가
   alert(`delete ${id}!!`);
 }
 

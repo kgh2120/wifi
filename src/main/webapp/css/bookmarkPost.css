@@ -1,0 +1,9 @@
+.bookmark-group-post-action-wrapper{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5px 0px;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-top: none;
+}
