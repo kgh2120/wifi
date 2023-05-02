@@ -3,6 +3,7 @@ package com.kk.wifi.dao;
 import com.kk.wifi.config.DBConnection;
 import com.kk.wifi.dto.BookmarkCreateRequest;
 import com.kk.wifi.dto.BookmarkRetrieveResponse;
+import com.kk.wifi.utils.LocalDateTimeFormatter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -97,7 +98,7 @@ public class BookmarkDao {
             st.setInt(1, bookmarkCreateRequest.getBookmarkGroupId());
             st.setInt(2, bookmarkCreateRequest.getDistanceId());
             st.setString(3, bookmarkCreateRequest.getWifiId());
-            st.setString(4, LocalDateTime.now().toString());
+            st.setString(4, LocalDateTimeFormatter.formatNow());
             st.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();

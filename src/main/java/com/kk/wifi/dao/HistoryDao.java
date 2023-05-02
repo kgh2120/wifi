@@ -2,6 +2,7 @@ package com.kk.wifi.dao;
 
 import com.kk.wifi.config.DBConnection;
 import com.kk.wifi.dto.HistoryResponse;
+import com.kk.wifi.utils.LocalDateTimeFormatter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,7 +34,7 @@ public class HistoryDao {
 
     public int saveHistory(String lat, String lnt){
         int id = -1;
-        final String now = LocalDateTime.now().toString();
+        final String now = LocalDateTimeFormatter.formatNow();
         String sql = "insert into history(lat, lnt, created_at) values(?, ?, ?) ";
         try{
             PreparedStatement pstm = conn.prepareStatement(sql);

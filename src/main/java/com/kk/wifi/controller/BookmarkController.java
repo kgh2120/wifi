@@ -1,11 +1,11 @@
 package com.kk.wifi.controller;
 
-import static com.kk.wifi.utils.BodyUtils.*;
+import static com.kk.wifi.utils.BodyUtils.readBody;
+import static com.kk.wifi.utils.BodyUtils.sendBody;
 
 import com.kk.wifi.dto.BookmarkCreateRequest;
 import com.kk.wifi.dto.BookmarkRetrieveResponse;
 import com.kk.wifi.service.BookmarkService;
-import com.kk.wifi.utils.BodyUtils;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +24,6 @@ public class BookmarkController extends HttpServlet {
         String id = req.getParameter("id");
         if (id == null) {
             sendBody(resp,bookmarkService.retrieveBookmarks());
-
         } else {
             BookmarkRetrieveResponse response = bookmarkService.retrieveSingleBookmark(
                     Integer.parseInt(id));

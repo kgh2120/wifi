@@ -23,8 +23,6 @@ b
 2src/main/java/com/kk/wifi/dto/WifiLocationDto.java,1\e\1e473a636e1ba14dc5cb808d27c19f5b6d7f956f
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-]
--src/main/java/com/kk/wifi/dao/HistoryDao.java,8\8\88e387a192b19592224d3729775af0978b8e9ff7
 f
 6src/main/java/com/kk/wifi/service/NearWifiService.java,4\d\4d610a6759b14656cf7b3ec1468f456ca511521f
 L
@@ -39,8 +37,6 @@ k
 ;src/main/java/com/kk/wifi/service/BookmarkGroupService.java,d\d\ddd1abf9b9c49087475ad53215bb75174768db17
 l
 <src/main/java/com/kk/wifi/dto/BookmarkGroupListResponse.java,d\3\d363cab30e4444fd108c270e053ebbb20ee26abd
-^
-.src/main/java/com/kk/wifi/dao/DistanceDao.java,a\e\aefbf011ecd82ca6b67c0cd56716b476b8574b76
 [
 +src/main/webapp/css/bookmark-group-list.css,a\6\a697ce6c3a7c6eb1ce3bfdf8b9c07fabb8792654
 P

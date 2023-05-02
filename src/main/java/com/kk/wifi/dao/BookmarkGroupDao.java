@@ -2,6 +2,7 @@ package com.kk.wifi.dao;
 
 import com.kk.wifi.config.DBConnection;
 import com.kk.wifi.dto.BookmarkGroupListResponse;
+import com.kk.wifi.utils.LocalDateTimeFormatter;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -38,7 +39,7 @@ public class BookmarkGroupDao {
             st = conn.prepareStatement(sql);
             st.setString(1, name);
             st.setInt(2, order);
-            st.setString(3, LocalDateTime.now().toString());
+            st.setString(3, LocalDateTimeFormatter.formatNow());
             st.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
@@ -89,7 +90,7 @@ public class BookmarkGroupDao {
             st = conn.prepareStatement(sql);
             st.setString(1, name);
             st.setInt(2, orders);
-            st.setString(3, LocalDateTime.now().toString());
+            st.setString(3, LocalDateTimeFormatter.formatNow());
             st.setInt(4, id);
             st.executeUpdate();
         }catch (SQLException e){
