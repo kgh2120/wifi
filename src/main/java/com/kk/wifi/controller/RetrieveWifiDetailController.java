@@ -28,7 +28,6 @@ public class RetrieveWifiDetailController extends HttpServlet {
             BodyUtils.sendBody(resp, response);
         }catch (NullPointerException | NumberFormatException e){
             resp.setStatus(404);
-            // TODO Exception Handling 추가
         }
 
 
