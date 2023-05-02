@@ -6,7 +6,7 @@ import lombok.Data;
 public class BookmarkRetrieveResponse {
 
     private int id;
-    private int distance_id;
+    private int history_id;
     private String wifi_id;
     private String group_name;
     private String wifi_name;

@@ -29,7 +29,3 @@ e
 5src/main/java/com/kk/wifi/dto/WIfiDetailResponse.java,5\8\58d05d2944563531a52f60b0ea259331af7d1b94
 l
 <src/main/java/com/kk/wifi/dto/BookmarkGroupListResponse.java,d\3\d363cab30e4444fd108c270e053ebbb20ee26abd
-[
-+src/main/webapp/css/bookmark-group-list.css,a\6\a697ce6c3a7c6eb1ce3bfdf8b9c07fabb8792654
-P
- src/main/webapp/view/history.jsp,4\a\4afdb56a1a1ce6faa0063b58d1cf543c9683b14a

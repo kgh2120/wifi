@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +32,8 @@ public class BookmarkDao {
     }
 
     public BookmarkRetrieveResponse retrieveSingleBookmark(int id){
-        final String sql = "select bookmark_group.name as group_name, bookmark.id as id, wifi.X_SWIFI_MAIN_NM as wifi_name, bookmark.created_at as created_at, bookmark.wifi_id as wifi_id, bookmark.distance_id as distance_id  from bookmark "
+        final String sql = "select bookmark_group.name as group_name, bookmark.id as id, wifi.X_SWIFI_MAIN_NM as wifi_name, "
+                + " bookmark.created_at as created_at, bookmark.wifi_id as wifi_id, distance.history_id as history_id  from bookmark "
                 + "join bookmark_group on bookmark_group.id = bookmark.group_id "
                 + "join distance on distance.id = bookmark.distance_id and distance.wifi_id = bookmark.wifi_id "
                 + "join wifi on wifi.X_SWIFI_MGR_NO = distance.wifi_id "
@@ -47,7 +47,7 @@ public class BookmarkDao {
             BookmarkRetrieveResponse response = new BookmarkRetrieveResponse();
             while(rs.next()){
                 response.setId(rs.getInt("id"));
-                response.setDistance_id(rs.getInt("distance_id"));
+                response.setHistory_id(rs.getInt("history_id"));
                 response.setWifi_id(rs.getString("wifi_id"));
                 response.setWifi_name(rs.getString("wifi_name"));
                 response.setGroup_name(rs.getString("group_name"));
@@ -61,7 +61,8 @@ public class BookmarkDao {
     }
 
     public List<BookmarkRetrieveResponse> retrieveBookmarks(){
-        final String sql = "select bookmark_group.name as group_name, bookmark.id as id, wifi.X_SWIFI_MAIN_NM as wifi_name, bookmark.created_at as created_at, bookmark.wifi_id as wifi_id, bookmark.distance_id as distance_id  from bookmark "
+        final String sql = "select bookmark_group.name as group_name, bookmark.id as id, wifi.X_SWIFI_MAIN_NM as wifi_name, "
+                + " bookmark.created_at as created_at, bookmark.wifi_id as wifi_id, distance.history_id as history_id  from bookmark "
                 + "join bookmark_group on bookmark_group.id = bookmark.group_id "
                 + "join distance on distance.id = bookmark.distance_id and distance.wifi_id = bookmark.wifi_id "
                 + "join wifi on wifi.X_SWIFI_MGR_NO = distance.wifi_id ";
@@ -76,7 +77,7 @@ public class BookmarkDao {
             while(rs.next()){
                 BookmarkRetrieveResponse response = new BookmarkRetrieveResponse();
                 response.setId(rs.getInt("id"));
-                response.setDistance_id(rs.getInt("distance_id"));
+                response.setHistory_id(rs.getInt("history_id"));
                 response.setWifi_id(rs.getString("wifi_id"));
                 response.setWifi_name(rs.getString("wifi_name"));
                 response.setGroup_name(rs.getString("group_name"));

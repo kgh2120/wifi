@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="/css/base.css?after">
 </head>
 <body>
-<h1>위치 히스토리 목록</h1>
+<h1>위치 히스토리 구하기</h1>
 <div class="link-wrapper">
     <a href="/">홈</a>
     <a href="/view/history.jsp">위치 히스토리 목록</a>
     <a href="/view/seoulWifi.jsp">Open API 와이파이 정보 가져오기</a>
-    <a href="#">북마크 보기</a>
+    <a href="/view/bookmarkList.jsp">북마크 보기</a>
     <a href="/view/bookmarkGroupList.jsp">북마크 그룹 관리</a>
 </div>
 
