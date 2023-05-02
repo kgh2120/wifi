@@ -20,7 +20,27 @@
     <a href="/view/bookmarkList.jsp">북마크 보기</a>
     <a href="/view/bookmarkGroupList.jsp">북마크 그룹 관리</a>
 </div>
-
-
+<table class="w-100 common-table">
+    <tbody class="detail-table-body">
+    <tr class="table-row">
+        <td class="common-table-header w-20 detail-table-title">북마크 이름</td>
+        <td class="bookmark-delete-row-data"></td>
+    </tr>
+    <tr class="table-row">
+        <td class="common-table-header w-20 detail-table-title">와이파이명</td>
+        <td class="bookmark-delete-row-data"></td>
+    </tr>
+    <tr class="table-row">
+        <td class="common-table-header w-20 detail-table-title">등록일자</td>
+        <td class="bookmark-delete-row-data"></td>
+    </tr>
+    </tbody>
+</table>
+<div class="bookmark-group-post-action-wrapper">
+    <a href="/view/bookmarkList.jsp">돌아가기</a>
+    <span class="divider"> l </span>
+    <button class="bookmark-delete-btn">삭제</button>
+</div>
+<script src="/js/bookmarkDelete.js?after"></script>
 </body>
 </html>
