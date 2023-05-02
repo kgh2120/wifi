@@ -25,11 +25,7 @@ public class HistoryController extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        System.out.println("delete Service!!");
-        System.out.println(req.getRequestURI());
         int id = Integer.parseInt(req.getParameter("id"));
-
-        System.out.println(id);
         historyDeleteService.deleteHistory(id);
 
     }

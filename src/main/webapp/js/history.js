@@ -1,6 +1,10 @@
 function deleteHistory(id){
-  // TODO History delete 추가
-  alert(`delete ${id}!!`);
+  if(confirm("정말로 삭제하시겠습니까?")){
+    fetch(`/history?id=${id}`,{
+      method : 'DELETE'
+    }).then(() => window.location.reload())
+    .catch(err => console.error(err));
+  }
 }
 
 function fetchHistory(){

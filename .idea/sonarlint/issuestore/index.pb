@@ -23,14 +23,10 @@ b
 2src/main/java/com/kk/wifi/dto/WifiLocationDto.java,1\e\1e473a636e1ba14dc5cb808d27c19f5b6d7f956f
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-k
-;src/main/java/com/kk/wifi/controller/HistoryController.java,a\e\ae189bac38c3d3ccde873f81fcae6921dcef4539
 ]
 -src/main/java/com/kk/wifi/dao/HistoryDao.java,8\8\88e387a192b19592224d3729775af0978b8e9ff7
 f
 6src/main/java/com/kk/wifi/service/NearWifiService.java,4\d\4d610a6759b14656cf7b3ec1468f456ca511521f
-O
-src/main/webapp/css/history.css,8\3\839ddddec4e7c45d3343c6d6b985b69ffef176f5
 L
 src/main/webapp/css/wifi.css,f\2\f2040876eb111784dd82ac489b13264d754468a1
 c
